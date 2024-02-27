@@ -1,0 +1,17 @@
+'''
+num=int(input("请输入阶乘的num="))
+sum=1
+for i in range(1,num+1):
+    sum*=num
+print(sum)
+'''
+#非递归计算
+
+#以下是递归的计算
+num=int(input("num="))
+def jie_cheng(num):
+    if num==1:
+        return 1
+    else:
+        return num*jie_cheng(num-1)
+print(jie_cheng(num))
