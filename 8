@@ -1,0 +1,37 @@
+'''
+import math
+a=float(input("a="))
+b=float(input("b="))
+def ping_fang(n):
+    if n == 0:
+        return 1
+    else:
+        return n*ping_fang(n)
+
+c= math.sqrt(ping_fang(a) + ping_fang(b))
+print(c)
+'''
+
+#这段代码存在两个问题需要修复：
+
+#1. 在导入math模块之前，需要先输入a和b的值。所以需要将导入math模块的代码放在输入a和b的代码之前。
+
+#2. 在定义ping_fang函数时，递归调用的方式不正确。应该是n * n，而不是n * ping_fang(n)。
+
+#修复后的代码如下所示：
+
+
+import math
+
+a = float(input("a="))
+b = float(input("b="))
+
+def ping_fang(n):
+    if n == 0:
+        return 1
+    else:
+        return n * n
+
+c = math.sqrt(ping_fang(a) + ping_fang(b))
+print(c)
+
