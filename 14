@@ -1,0 +1,26 @@
+'''
+def jiang_wei(n):
+    num=num%10
+list1=[]
+num=int(input("请输入num="))
+n=int(input("请输入num的位数n="))
+if n!=0:
+    for i in range(1,n):
+        a= jiang_wei(n)
+        list1.append(a)
+        n=n-1
+print(list1)
+'''
+#以上代码是我尝试动用递归进行任意位数进行先求高位再求低位最后倒位存储于list1中
+
+#如果这段代码补全，通过乘以不同数量的10然后相加即可反向输出num
+
+#很可惜以上代码存在bug，我找不出问题所在
+
+#以下是通过字典特性进行运行的代码
+
+num=int(input("num="))
+num=str(num)
+num=num[::-1]
+num=int(num)
+print(num)
