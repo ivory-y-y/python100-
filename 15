@@ -1,0 +1,6 @@
+num=input("请输入判断的字符")
+result=num.isalpha()
+if result:
+    print(f'{num} is ')
+else:
+    print(f'{num} isn’t ')
