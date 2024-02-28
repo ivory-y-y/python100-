@@ -4,3 +4,5 @@ if result:
     print(f'{num} is ')
 else:
     print(f'{num} isn’t ')
+
+#以上代码是基于isalpha()函数进行运行
