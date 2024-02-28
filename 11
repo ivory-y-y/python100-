@@ -1,0 +1,14 @@
+'''
+a=int(input("a="))
+b=int(input("b="))
+c=int(input("c="))
+d=int(input("d="))
+for a in range(a,b,c,d):
+    for b in range(a, b, c, d):
+        for c in range(a, b, c, d):
+            for d in range(a, b, c, d):
+                if (a!=b)and(b!=c)and(c!=d)and(a!=d):
+                    print(f'{a},{b},{c},{d}')
+'''
+
+#以上代码是错误的，并不能对任意输入的四个数abcd进行穷举排列组合的可能性
