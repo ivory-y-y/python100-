@@ -1,0 +1,8 @@
+import time
+time.sleep(5)
+
+#time模块
+
+#sleep()函数
+
+print("这个代码运行时间延迟5s后才会输出")
