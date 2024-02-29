@@ -21,6 +21,13 @@ for i in range(1,num):
     for j in range(1,i):
         if i % j ==0:
             sum+=j
+
+#sum为可以被从1开始到num结束的迭代数值i
+
+#有可以被因子j整除，即i%j==0的j的总和
+
+#即sum为因子和
+
     if sum==i:
         print(f'{i} is ok')
         
