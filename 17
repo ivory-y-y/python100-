@@ -1,0 +1,26 @@
+'''
+num=int(input("num="))
+list=[]
+for i in range(1,num):
+    for j in range(1,i):
+        if i * j == num and :
+
+            list.append(i)
+            print(list)
+'''
+
+#以上代码是基于数学原理进行猜测
+
+#缺少最重要的收集因子并计算之和过程
+
+#以下是正常的代码
+
+num=int(input("num="))
+for i in range(1,num):
+    sum=0
+    for j in range(1,i):
+        if i % j ==0:
+            sum+=j
+    if sum==i:
+        print(f'{i} is ok')
+        
