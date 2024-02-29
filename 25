@@ -1,0 +1,26 @@
+string = input("请输入字符串")
+
+char=0
+number=0
+space=0
+other=0
+
+for i in string:
+    if i.isalpha():
+    
+#字符串函数isalpha()
+
+        char+=1
+    elif i.isspace():
+    
+#空格函数isspace()
+
+        space+=1
+    elif i.isdigit():
+    
+#数字函数isdigit()
+
+        number+=1
+    else:
+        other+=1
+print(f'char={char},space={space},number={number},other={other}')
