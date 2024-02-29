@@ -1,0 +1,11 @@
+import copy
+list = [1,2,3,4]
+list1=copy.copy(list)
+
+#copy()函数
+
+#这之后修改list，输出的list1已经复制完成
+
+list[0]=30
+print(f'list={list}')
+print(f'list1={list1}')
