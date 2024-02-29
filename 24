@@ -1,0 +1,9 @@
+score=float(input("请输入成绩score="))
+if score<0:
+    print("bug")
+elif score >= 90:
+    print('A')
+elif 60 <= score < 90:
+    print('B')
+else :
+    print('C')
