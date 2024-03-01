@@ -1,0 +1,25 @@
+a=input("")
+if a == "M":
+    print("1")
+elif a == "T":
+    b=input("")
+    if b == "u":
+        print("2")
+    elif b == "h":
+        print("4")
+    else:
+        print("bug")
+elif a == "W":
+    print("3")
+elif a == "F":
+    print("5")
+elif a == "S":
+    b=input("")
+    if b == "a":
+        print("6")
+    elif b == "u":
+        print("7")
+    else:
+        print("bug")
+else:
+    print("bug")
