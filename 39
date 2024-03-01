@@ -1,0 +1,14 @@
+x=int(input("x="))
+y=int(input("y="))
+
+#def 定义函数
+
+def func(x,y):
+    a=x*y
+    return a
+print(func(x,y))
+
+#lambda
+
+b=lambda x,y:x*y
+print(b(x,y))
