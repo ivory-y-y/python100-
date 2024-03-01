@@ -1,0 +1,9 @@
+num=int(input("num="))
+day=int(input("day="))
+def chi_tao(num):
+    num=(num+1)*2
+    return num
+above=num
+for i in range(day-1):
+    above=chi_tao(above)
+print(above)
