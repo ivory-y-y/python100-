@@ -1,0 +1,7 @@
+num=int(input("num="))
+num=str(num)
+b=a[::-1]
+if a==b:
+    print("yes")
+else:
+    print("no")
