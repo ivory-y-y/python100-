@@ -1,0 +1,39 @@
+'''
+high=float(input("high="))
+n=int(input("n="))
+def fan_tan(high):
+    high/=2
+
+    #这里应该插入return high
+
+    #这里需要H=high因为下面利用第三赋值H提高运行速度
+
+for i in range(1,n):
+    H=fan_tan(high)
+print(H)
+'''
+
+#这段原始代码有几个错误：
+
+#1. 函数`fan_tan`没有返回值，所以在循环中赋值给`H`的值将始终为`None`。
+
+#2. 在循环中，应该将`high`重新赋值为`fan_tan(high)`，而不是将结果赋值给`H`。
+
+#3. 循环的范围应该是从0到n-1，而不是从1到n。
+
+#下面是修复后的代码：
+
+high = float(input("high="))
+n = int(input("n="))
+
+def fan_tan(high):
+    high /= 2
+    return high
+H=high
+for i in range(n-1):
+    H = fan_tan(H)
+print(H)
+
+#修复后的代码会将`high`的值连续除以2，共计n-1次，并将最终结果赋值给`H`进行输出。
+
+#range(n-1)==range(1,n)
