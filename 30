@@ -1,0 +1,8 @@
+age=int(input("age="))
+def nian_ling(age):
+
+    if age==1:
+        return 10
+    else:
+        return nian_ling(age-1)+2
+print(nian_ling(age))
