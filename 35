@@ -1,0 +1,12 @@
+a=[]
+sum=0
+for i in range(3):
+    a.apppend([])
+    #在a列表里放入3次一行空，等于放入了三行空
+    for j in range(3):
+        k= int(input("k="))
+        a[i].append(k)
+        #放入数据，循环3次限定了一行3个数据而后自动填充下一行
+        if i == j:
+            sum+=a [i][j]
+print(a)
