@@ -1,0 +1,13 @@
+Z=int(input("Z="))
+M=int(input("M="))
+num=int(input("num="))
+sum=0
+for i in range(num-1):
+    sum=Z/M+sum
+    a=M
+    
+#这里赋值a=M使a等于分母，否则下面M=Z后Z=Z+Z算法错误
+    
+    M=Z
+    Z=Z+a
+print(sum)
