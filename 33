@@ -1,0 +1,11 @@
+list=[1,2,3,4,5]
+list1=list[::-1]
+
+#通过切片反向遍历
+
+list.reverse()
+
+#通过reverse()函数
+
+print(list1)
+print(list)
