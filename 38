@@ -1,0 +1,14 @@
+import  random
+a=random.random()
+
+#返回一个浮点数，有可能取0
+
+b=random.randint(1,10)
+
+#范围内返回一个整数
+
+c=random.randrange(1,10,3)
+
+#切片得到的数内随机选一个
+
+print(a,b,c)
