@@ -1,0 +1,14 @@
+num1=float(input("num1="))
+num2=float(input("num2="))
+
+#中间值法
+
+sum=num1
+num1=num2
+num2=sum
+
+#py特性按顺序赋值
+
+num1,num2=num2,num1
+
+print(f'num1={num1},num2={num2}')
