@@ -1,0 +1,14 @@
+
+num1=input("num1=")
+num2=input("num2=")
+
+#len()函数
+
+print(len(num1))
+
+#遍历
+
+length=0
+for i in num2:
+    length+=1
+print(length)
