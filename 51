@@ -1,0 +1,12 @@
+def func(nums):
+    l1=[i for i in range(1,len(nums)+1)]
+    l2=[]
+    nums=set(nums)
+    for o in l1:
+        if o in nums:
+            continue
+        else:
+            l2.append(o)
+    return l2
+list=[1,3,5,7,9]
+print(func(list))
