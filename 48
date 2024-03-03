@@ -1,0 +1,16 @@
+import random
+target=random.randint(1,99)
+times=7
+print("game start!")
+while times != 0:
+    num = int(input("try\n"))
+    if num > target:
+        print("big\n")
+        continue
+    elif num < target:
+        print("small\n")
+        continue
+    else:
+        print("yes",target)
+if times == 0 :
+    print("loss")
