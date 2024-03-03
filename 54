@@ -1,0 +1,6 @@
+import math
+n=int(input("n="))
+def func(n):
+    result= math.pow(n,1/3)
+    return  int(result)
+print(func(n))
