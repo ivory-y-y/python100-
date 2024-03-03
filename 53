@@ -1,0 +1,59 @@
+'''
+num= int(input("num="))
+
+def wei_shu(n):
+    num=0
+    while n > 10:
+        j=n%10
+        num+=j*j
+        n//=10
+    return num
+def qiu_he(num):
+    while num > 9:
+        num=wei_shu(n)
+        
+#这里是num不是n
+        
+    if n == 1:
+    
+#这里是num不是n
+        
+        return True
+    else:
+        return False
+
+print(qiu_he(num))
+'''
+
+#根据你提供的代码，我发现了以下几个问题1. 在函数`wei_shu`中，你使用了一个未定义的变量`n`，应该将其改为`num`。
+
+#2. 在函数`qiu_he`中，你使用了一个未定义的变量`n`，应该将其改为`num`。
+
+#3. 在函数`qiu_he`中，你没有在函数体内返回任何值，应该将`return True`和`return False`改为`return True`和`return False`。
+
+#修复后的代码如下：
+
+
+num = int(input("num="))
+
+def wei_shu(n):
+    num = 0
+    while n > 10:
+        j = n % 10
+        num += j * j
+        n //= 10
+    return num
+
+def qiu_he(num):
+    while num > 9:
+        num = wei_shu(num)
+    if num == 1:
+        return True
+    else:
+        return False
+
+print(qiu_he(num))
+
+#错误原因知识点：代码中存在语法错误和逻辑错误。语法错误是指代码不符合Python语法规则，例如变量未定义、缩进错误等。逻辑错误是指代码的执行结果与预期不符，例如循环条件错误、变量赋值错误等。
+
+
