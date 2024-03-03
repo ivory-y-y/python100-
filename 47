@@ -1,0 +1,4 @@
+str1=input()
+str2="hello world"
+print(str2)
+print(str2.find(str1))
