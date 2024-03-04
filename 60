@@ -1,0 +1,9 @@
+def suo_yin(str):
+    for i in range(len(str)):
+        if str[i] == str[i+1]:
+
+#"=="可以用in代替
+
+            return False
+    return True
+print(suo_yin('hello'))
