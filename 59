@@ -1,0 +1,9 @@
+a=int(input("a="))
+b=bin(a)
+
+#bin()函数将十进制转化为二进制
+
+print(b)
+print(type(b))
+
+#type()函数将返回输出类型
