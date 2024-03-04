@@ -1,0 +1,15 @@
+def func(s,t):
+    c=''
+    n=0
+    if len(s)>len(t):
+        return False
+    for i in t:
+        if i == s[n]:
+#i循环遍历字符串t，等于字符串s中下标为n的字母
+            c+=i
+#将字符串t中属于字符串s的字母储存在c里
+            n+=1
+    if s == c :
+        return True
+    return False
+print(func('hlo','hello'))
