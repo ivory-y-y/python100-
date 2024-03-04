@@ -1,0 +1,8 @@
+ip=str(input("ip="))
+def func(str):
+    str=str.split('.')
+    res=''
+    for i in str:
+        res+='{:08b}'.format(int(i))
+    return int(res,2)
+print(func(ip))
