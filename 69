@@ -1,0 +1,4 @@
+def func(n):
+    return n>0 and n&(n-1)==0
+print(func(32))
+print(func(31))
