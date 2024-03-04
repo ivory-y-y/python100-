@@ -1,0 +1,9 @@
+def func(a,b):
+    if len(a)!=len(b):
+        return False
+    else:
+        bigA=a+a
+#特别的，如果b基于一个位置旋转后可以得到a，字符串拼接的aa之中必定存在b
+        result=b in bigA
+        return result
+print(func('hello','lloh'))
