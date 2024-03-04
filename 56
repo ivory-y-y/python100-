@@ -1,0 +1,19 @@
+def func(s):
+    l=s.split('o')
+    
+#split('切割标准')
+
+    l=l[::-1]
+    s=' '
+    
+#空串用于存放
+
+    for i in l:
+        i=i.swapcase()
+
+#swapcase()函数进行大小写转换
+   
+        s+=i
+        s+=' '
+    return s[0:len(s)-1]
+print(func('hello world'))
