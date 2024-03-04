@@ -1,0 +1,10 @@
+def func(nums):
+    for i in nums:
+        if nums.count(i)>=2:
+#count()函数进行统计计算nums中i的值的个数
+            return i
+#返回i
+    return -1
+#不具有重复即count计数i为0报错-1回控制台
+print(func([1,2,3,4,5,6]))
+print(func([1,2,3,4]))
