@@ -1,0 +1,8 @@
+def func ( k ,n ) :
+    count = 0
+    for i in range ( 0 , n+1 ):
+        time = str( i).count ( str (k ) )
+        count += time
+    return count
+
+print(func ( 1,11))
