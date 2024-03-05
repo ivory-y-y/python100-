@@ -1,0 +1,43 @@
+'''
+strs=input("strs=")
+det=input("det=")
+def del_str(strs):
+    for i in strs:
+        l=strs.split(det)
+        l=l[::-1]
+        s=' '
+        for j in l:
+            s+=i
+            s+=' '
+        return s[0:len(strs)+1]
+    return s
+print(del_str(strs))
+'''
+#修复后的代码如下所示：
+
+
+strs = input("strs=")
+det = input("det=")
+
+def del_str(strs, det):
+    l = strs.split(det)
+    l = l[::-1]
+    s = ''
+    for i in l:
+        s += i
+        s += det
+    return s[:-len(det)]
+print(del_str(strs, det))
+
+'''
+修复后的代码存在以下问题：
+1. 在原代码中，使用了一个额外的循环来遍历字符串 `strs`，这是不必要的。
+2. 在原代码中，使用了一个额外的变量 `s` 来保存结果，但是没有正确处理字符串之间的分隔符 `det`。
+3. 在原代码中，使用了 `return` 语句来提前结束函数，导致只能删除第一个与 `det` 相同的字符串。
+
+修复后的代码解决了以上问题：
+1. 直接使用 `strs.split(det)` 将字符串 `strs` 按照分隔符 `det` 分割成列表 `l`。
+2. 将列表 `l` 反转，并使用 `det` 连接列表中的元素。
+3. 最后通过切片操作 `s[:-len(det)]` 去掉最后一个多余的分隔符 `det`。
+
+'''
