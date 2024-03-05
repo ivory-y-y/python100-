@@ -1,0 +1,37 @@
+'''def pai(target):
+    lista=nums[::-1]
+    lista.append(target)
+    nums=lista[::-1]
+    return nums
+target=int(input("target="))
+nums=[2,4,6,8]
+print(pai(target))'''
+
+'''这段代码存在几个错误和问题：
+1. 在函数定义中，应该使用单个等号（=）进行赋值操作，而不是双等号（==）。所以应该将"lista==nums[::-1]"和"nums==lista[::-1]"改为"lista = nums[::-1]"和"nums = lista[::-1]"。
+2. 在函数定义中，应该使用冒号（:）来表示代码块的开始。所以应该在函数定义的最后一行添加冒号。
+3. 在函数定义中，应该将参数target的类型声明为int，而不是使用input函数来获取用户输入。所以应该将"target=int(input("target="))"改为"def pai(target: int):"。
+4. 在函数定义中，应该使用return语句来返回结果，而不是使用print函数来输出结果。所以应该将"print(pai(target))"改为"return pai(target)"。
+
+修复后的代码如下：
+'''
+def pai(target: int):
+    lista = nums[::-1]
+    lista.append(target)
+    nums = lista[::-1]
+    return nums
+
+target = 10
+nums = [2, 4, 6, 8]
+print(pai(target))
+
+
+'''错误的地方知识点：
+1. 使用双等号（==）进行赋值操作是错误的，应该使用单个等号（=）。
+2. 函数定义需要使用冒号（:）来表示代码块的开始。
+3. 参数类型声明应该在函数定义中进行，而不是在函数调用时使用input函数获取用户输入。
+
+解决方法：
+1. 将双等号（==）改为单个等号（=）来进行赋值操作。
+2. 在函数定义的最后一行添加冒号（:）。
+3. 在函数定义中使用参数类型声明来指定参数的类型，而不是在函数调用时使用input函数获取用户输入。'''
