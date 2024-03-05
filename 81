@@ -1,0 +1,5 @@
+def func ( A,B):
+    A=sorted ( A )
+    B=sorted ( B)
+    return A==B
+print ( func( ' abc ' , ' cba'))
