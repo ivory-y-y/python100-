@@ -1,0 +1,31 @@
+class A():
+    def __init__(self):
+        print("this is init method in A")
+    def a(self):
+        print("this is method in A")
+
+class B():
+    def __init__(self):
+        print("this is init method in B")
+    def a(self):
+        print("this is method in B")
+    def b(self):
+        print("this is init method in B")
+
+class C(A,B):
+    pass
+
+class D(B,A):
+    pass
+
+c=C()
+#在c类中查询init方法
+c.a()
+#在c类中查询a方法
+c.b()
+#在c类中查询b方法
+d=D()
+#在d类中查询init方法
+d.a()
+d.b()
+#注意d.C()是不合法的但是d.c()可以在d类查询c方法
