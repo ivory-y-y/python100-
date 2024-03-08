@@ -1,0 +1,57 @@
+class A:
+    def __init__(self, x):
+        self._x = x
+
+    def fun(self, x):
+        return self.foo(x) + 1
+
+    def foo(self, x):
+        return x * x
+
+
+# 首先，我们定义了一个基类A，它有一个构造函数__init__，用于初始化实例变量self._x。类A还有两个方法fun和foo，其中fun方法调用了foo方法，并对其返回值进行加1操作。
+
+class B(A):
+    def foo(self, y):
+        return self._x * y
+
+
+# 接下来，我们定义了一个继承自A的子类B。类B重写了基类A的foo方法，将其实现改为返回self._x与参数y的乘积。
+
+class C(B):
+    def __init__(self, x, y):
+        super().__init__(x)
+        self._y = y
+
+
+# 然后，我们定义了两个继承自B的子类C和D。类C有一个构造函数__init__，它调用了基类B的构造函数，并初始化了实例变量self._y。
+
+class D(B):
+    def __init__(self, x, y):
+        super().__init__(x)
+        self._x -= y
+        self._y = y
+
+#类D也有一个构造函数__init__，它同样调用了基类B的构造函数，并对self._x和self._y进行了一些操作。
+
+def fun(self, x):
+    return super().fun(x) * x
+
+
+def foo(self, y):
+    return self._y * y
+
+
+# 最后，我们定义了两个函数fun和foo，它们并不属于任何类，但可以作为类的方法使用。函数fun调用了基类B的fun方法，并对其返回值进行了乘法操作。函数foo返回self._y与参数y的乘积。
+
+'''以上代码是一个简单的类继承关系示例。
+在这段代码中，易错易混的知识点有：
+1. 继承关系：子类继承了父类的属性和方法，可以通过super()函数调用父类的方法。在类C和类D的构造函数中，使用super().__init__(x)调用了基类B的构造函数。
+2. 实例变量和类变量：实例变量是每个实例对象独有的，而类变量是所有实例对象共享的。在类A中，self._x是一个实例变量，而在类B、类C和类D中，self._x是一个继承自基类A的实例变量。
+3. 方法重写：子类可以重写父类的方法，以改变其行为。在类B中，重写了基类A的foo方法。
+4. 方法调用：在类的方法中，可以通过self来调用其他方法。例如，在类A的fun方法中，调用了foo方法。
+5. 函数与方法的区别：函数是独立存在的，而方法是属于某个类的。在这段代码中，fun和foo是函数，但可以作为类的方法使用。
+
+希望以上解释对您有帮助。如果还有其他问题，请随时提问。
+
+'''
