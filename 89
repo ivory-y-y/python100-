@@ -1,0 +1,46 @@
+class Phone():
+    def call(self):
+        print("使用功能机打电话")
+        
+#首先，我们定义了一个基类Phone，其中有一个call方法，用于打电话。这个方法在基类中只是简单地打印出"使用功能机打电话"。
+
+#接下来，我们定义了三个子类IPone、APhone和HPhone，它们都继承自Phone类。这意味着它们会继承Phone类中的所有属性和方法。但是，由于这三个子类都重新定义了call方法，它们的call方法会覆盖掉基类中的call方法。
+
+class IPone(Phone):
+    def call(self):
+        print("使用苹果手机打电话")
+
+class APhone(Phone):
+    def call(self):
+        print("使用安卓手机打电话")
+
+class HPhone(Phone):
+    def call(self):
+        print("使用华为手机打电话")
+
+#在IPone、APhone和HPhone中，分别定义了不同的call方法。IPone的call方法打印出"使用苹果手机打电话"，APhone的call方法打印出"使用安卓手机打电话"，HPhone的call方法打印出"使用华为手机打电话"。
+
+class Person():
+    def use_phone_call(self,phone):
+        phone.call()
+#最后，我们定义了一个Person类，其中有一个use_phone_call方法，用于使用手机打电话。这个方法接收一个phone参数，然后调用phone的call方法。
+
+person=Person()
+person.use_phone_call(Phone())
+person.use_phone_call(IPone())
+person.use_phone_call(APhone())
+person.use_phone_call(HPhone())
+
+'''这段代码定义了一个简单的类继承关系，包括了Phone、IPone、APhone、HPhone和Person五个类。
+
+在主程序中，我们创建了一个Person对象person，并依次调用了person的use_phone_call方法，传入不同的手机对象作为参数。分别传入了Phone、IPone、APhone和HPhone的实例。
+
+根据传入的不同手机对象，调用的call方法也不同，从而实现了多态性。即使调用的是相同的方法名，但由于对象的不同，实际执行的方法也不同。
+
+这段代码的底层原理是基于面向对象编程中的继承和多态性。继承使得子类可以继承父类的属性和方法，而多态性则允许不同的对象对相同的方法做出不同的响应。
+
+通过这段代码，我们可以看到多态性的实现方式。不同的手机对象调用相同的方法名call，但实际执行的是各自类中定义的call方法。这样可以根据具体对象的类型来决定执行哪个方法，从而实现了灵活性和可扩展性。
+
+总结起来，这段代码展示了面向对象编程中继承和多态性的应用。通过继承，子类可以继承父类的属性和方法；通过多态性，不同的对象可以对相同的方法做出不同的响应。这样可以提高代码的复用性和可扩展性，使得程序更加灵活和易于维护。
+
+'''
