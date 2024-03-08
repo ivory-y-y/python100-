@@ -1,0 +1,78 @@
+class B:
+    """类B"""
+    def __init__(self):
+        print("This is init method in class B")
+    def info(self):
+        print("This is info method in class B")
+
+#在这段代码中，定义了一个名为B的类。该类有两个方法：__init__和info。__init__方法是类的构造函数，当创建类的实例时会自动调用该方法。info方法用于打印一条信息。
+
+class A(B):
+    """类A"""
+    def __init__(self):
+        super().__init__()
+        print("This is init method in class A")
+
+    def info(self):
+        super().info()
+        print("This is info method in class A")
+
+#在这段代码中，定义了一个名为A的类，它继承自类B。类A也有两个方法：__init__和info。__init__方法首先调用了父类B的构造函数，然后打印一条信息。info方法首先调用了父类B的info方法，然后再打印一条信息。
+
+a=A()
+
+#创建了一个名为a的A类的实例。
+
+a.info()
+
+#调用了a实例的info方法。
+
+#下面是对每一行代码和语句的详细解释：
+
+'''1. class B:
+   定义了一个名为B的类。
+
+2. """类B"""
+   给类B添加了一个文档字符串，用于描述该类的作用和功能。
+
+3. def __init__(self):
+   定义了类B的构造函数__init__。构造函数在创建类的实例时自动调用。
+
+4. print("This is init method in class B")
+   打印一条信息，表示这是类B的构造函数。
+
+5. def info(self):
+   定义了类B的info方法。
+
+6. print("This is info method in class B")
+   打印一条信息，表示这是类B的info方法。
+
+8. class A(B):
+   定义了一个名为A的类，它继承自类B。
+
+9. """类A"""
+   给类A添加了一个文档字符串，用于描述该类的作用和功能。
+
+10. def __init__(self):
+    定义了类A的构造函数__init__。
+
+11. super().__init__()
+    调用父类B的构造函数__init__。super()函数返回父类的对象，通过调用该对象的方法来实现对父类方法的调用。
+
+12. print("This is init method in class A")
+    打印一条信息，表示这是类A的构造函数。
+
+14. def info(self):
+    定义了类A的info方法。
+
+15. super().info()
+    调用父类B的info方法。super()函数返回父类的对象，通过调用该对象的方法来实现对父类方法的调用。
+
+16. print("This is info method in class A")
+    打印一条信息，表示这是类A的info方法。
+
+18. a=A()
+    创建了一个名为a的A类的实例。
+
+20. a.info()
+    调用a实例的info方法。'''
