@@ -1,0 +1,11 @@
+class Parent():
+    def func(self):
+        print("This is in parent func")
+    def __init__(self):
+        print("This is init method in parent")
+
+class Son(Parent):
+    def func(selfself):
+        print("This is in son func")
+
+s=Son()
