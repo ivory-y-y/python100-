@@ -1,0 +1,16 @@
+class A():
+    def __init__(self):
+        print("A")
+#定义一个A类,调用时init方法传递它自己print
+class B(A):
+    pass
+#定义一个B类继承A，B为空即调用时追溯父类A
+class C(A):
+    def __init__(self):
+        print("C")
+#定义一个C类继承A，调用时init方法传递给自己print
+class D(B,C):
+    pass
+#定义一个D类继承B，C，D空，调用时按顺序追溯B，C
+obj=D()
+#调用D，追溯B，B空，追溯C发现init，输出c
