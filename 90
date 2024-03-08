@@ -1,0 +1,44 @@
+#以上代码定义了三个类：Animal、Bird和Fish。Animal是一个基类，Bird和Fish是Animal的子类。
+
+class Animal:
+    def __init__(self, leg):
+        self.leg = leg
+
+    def info(self):
+        print(f'我有{self.leg}条腿')
+
+#在Animal类中，有一个构造函数__init__，它接受一个参数leg，并将其赋值给实例变量self.leg。该类还有一个方法info，用于打印出动物的腿的数量。
+
+class Bird(Animal):
+    def __init__(self, leg, color):
+        self.color = color
+        super().__init__(leg)
+
+    def info(self):
+        print(f'我是一只具有{self.color}羽毛的鸟')
+        super().info()
+
+#Bird类继承自Animal类，通过在类定义中的括号中指定基类Animal，即class Bird(Animal)。Bird类有一个构造函数__init__，它接受两个参数leg和color，并将color赋值给实例变量self.color。然后，使用super()函数调用基类Animal的构造函数，将leg传递给基类的构造函数进行初始化。Bird类还有一个方法info，用于打印出具有特定颜色羽毛的鸟的信息。在该方法中，首先打印出鸟的颜色，然后使用super()函数调用基类Animal的info方法，打印出鸟的腿的数量。
+
+class Fish(Animal):
+    def __init__(self, leg, color):
+        self.color = color
+        super().__init__(leg)
+
+    def info(self):
+        print(f'我是一条{self.color}鱼')
+        super().info()
+
+#Fish类也继承自Animal类，通过在类定义中的括号中指定基类Animal，即class Fish(Animal)。Fish类与Bird类的结构相似，有一个构造函数__init__和一个info方法。构造函数接受两个参数leg和color，并将color赋值给实例变量self.color。然后，使用super()函数调用基类Animal的构造函数，将leg传递给基类的构造函数进行初始化。Fish类的info方法打印出具有特定颜色的鱼的信息，并使用super()函数调用基类Animal的info方法，打印出鱼的腿的数量。
+
+bird = Bird(2, "白色")
+fish = Fish(0, "黑色")
+
+#创建了一个Bird对象bird和一个Fish对象fish。Bird对象的leg属性被初始化为2，color属性被初始化为"白色"。Fish对象的leg属性被初始化为0，color属性被初始化为"黑色"。
+
+bird.info()
+fish.info()
+
+#调用bird对象的info方法和fish对象的info方法。这两个方法会分别打印出鸟和鱼的信息，并调用基类Animal的info方法，打印出腿的数量。
+
+ 
