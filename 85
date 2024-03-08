@@ -1,0 +1,14 @@
+class Parent():
+    def __func(self):
+        print("This is in parent func")
+    def __init__(self):
+        print("This is init method in parent")
+        self.__func()
+        
+#意思为调用自己的__func()方法
+
+class Son(Parent):
+    def func(selfself):
+        print("This is in son func")
+
+s=Son()
